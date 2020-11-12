@@ -1,0 +1,70 @@
+class Product{
+	int price;
+	int bonusPoint;
+	public Product(int price) {
+		this.price=price;
+		bonusPoint=(int)(price/10.0);
+	}
+}
+class Tv extends Product{
+	public Tv(){
+		super(100);
+	}
+	public String toString() {
+		return "Tv";
+	}
+}
+class Computer extends Product{
+	public Computer(){
+		super(200);
+	}
+	public String toString() {
+		return "Computer";
+	}
+}
+class Audio extends Product{
+	public Audio(){
+		super(50);
+	}
+	public String toString() {
+		return "Audio";
+	}
+}
+class Buyer{
+	int money=1000;
+	int bonusPoint=0;
+	void buy(Product p) {
+		if(p.price>money) {
+			System.out.println("money is not enough.");
+			System.exit(0);
+		}
+		money=money-p.price;
+		bonusPoint=bonusPoint+p.bonusPoint;
+	}
+}
+public class Ex {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Product tv1=new Tv();
+		Product com1=new Computer();
+		Product a1=new Audio();
+		
+		Buyer Buyer1=new Buyer();
+		
+		Buyer1.buy(tv1);
+		Buyer1.buy(com1);
+		Buyer1.buy(a1);
+		
+		System.out.println(tv1);
+		System.out.println(tv1.price);
+		System.out.println(com1);
+		System.out.println(com1.price);
+		System.out.println(a1);
+		System.out.println(a1.price);
+		
+		System.out.println("Money: "+Buyer1.money);
+		System.out.println("BonusPoint: "+Buyer1.bonusPoint);
+	}
+
+}

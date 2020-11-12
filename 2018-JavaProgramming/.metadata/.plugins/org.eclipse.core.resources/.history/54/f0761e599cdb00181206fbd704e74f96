@@ -1,0 +1,67 @@
+class Tv{
+	int price;
+	int bonusPoint;
+	public Tv(){
+		price=100;
+		bonusPoint=(int)(price/10.0);
+	}
+	public String toString() {
+		return "Tv";
+	}
+}
+class Computer{
+	int price;
+	int bonusPoint;
+	public Computer(){
+		price=200;
+		bonusPoint=(int)(price/10.0);
+	}
+	public String toString() {
+		return "Computer";
+	}
+}
+class Audio{
+	int price;
+	int bonusPoint;
+	public Audio(){
+		price=50;
+		bonusPoint=(int)(price/10.0);
+	}
+	public String toString() {
+		return "Audio";
+	}
+}
+class Buyer{
+	int money=1000;
+	int bonusPoint=0;
+	public void buy(Tv t) {
+		money=money-t.price;
+		bonusPoint=bonusPoint+t.bonusPoint;
+	}
+	public void buy(Computer c) {
+		money=money-c.price;
+		bonusPoint=bonusPoint+c.bonusPoint;
+	}
+	public void buy(Audio a) {
+		money=money-a.price;
+		bonusPoint=bonusPoint+a.bonusPoint;
+	}
+}
+public class Ex {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Tv t=new Tv();
+		Computer com=new Computer();
+		Audio a=new Audio();
+		Buyer Buyer1=new Buyer();
+		
+		Buyer1.buy(t);
+		Buyer1.buy(com);
+		Buyer1.buy(a);
+		
+		System.out.println("Money: "+Buyer1.money);
+		System.out.println("BonusPoint: "+Buyer1.bonusPoint);
+	}
+
+}

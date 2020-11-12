@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;week12.lab9&apos; to &apos;lab9_catch&apos;&#x0D;&#x0A;- Original project: &apos;week12&apos;&#x0D;&#x0A;- Original element: &apos;week12.lab9&apos;&#x0D;&#x0A;- Renamed element: &apos;week12.lab9_catch&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;lab9&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;week12{lab9.java[lab9" matchStrategy="1" name="lab9_catch" qualified="false" references="true" similarDeclarations="false" stamp="1544611605468" textual="false" version="1.0"/>
+</session>
